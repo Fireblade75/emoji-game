@@ -1,0 +1,16 @@
+{
+  "name": "emoji-game-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "npm run-script build --prefix ../emoji-game-web &&  node src/server.js",
+    "quickstart": "node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.15.1",
+    "fastify-static": "^4.0.1"
+  }
+}
