@@ -11,14 +11,13 @@ export class CatPageComponent implements OnInit {
 
   constructor(private catService: CatService) { }
 
-  cats: Cat[] = [{
-    name: "Poeka",
-    color: "yellow",
-    gender: "male"
-  }]
+  cats: Cat[] = []
 
   ngOnInit(): void {
     this.catService.getCats()
+      .subscribe((remoteCats) => {
+        this.cats = remoteCats
+      })
   }
 
   getCats() {
