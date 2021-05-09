@@ -40,6 +40,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /emoji-game-web/typings
+/emoji-game-api/static
 
 # System Files
 .DS_Store
