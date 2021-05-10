@@ -1,14 +1,15 @@
 <main>
     <div class="gameBox">
         <h1>Choose an Avatar</h1>
+        <h2>Game Pin: A4C8A</h2>
         <div class="avatar-container">
-            <app-avatar name="Bob"></app-avatar>
-            <app-avatar name="Simon"></app-avatar>
+            <app-avatar *ngFor="let avatar of avatars"
+                [name]="avatar.name" [emoji]="avatar.emoji"></app-avatar>
         </div>
         <form [formGroup]="nameForm" (ngSubmit)="selectName()">
             <div *ngIf="error" class="error-box">{{error}}</div>
-            <input type="text" name="GamePin" placeholder="Name"> <br>
-            <app-emoji-picker emojis="🧒👱👩👨‍🦲🧓"></app-emoji-picker> <br>
+            <input type="text" name="name" formControlName="name" placeholder="Name"> <br>
+            <app-emoji-picker emojis="🧒👱👩👨‍🦲🧓" formControlName="emoji"></app-emoji-picker> <br>
             <button type="submit">Confirm</button>
         </form>
     </div>

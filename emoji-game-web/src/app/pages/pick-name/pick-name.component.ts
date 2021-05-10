@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Avatar } from 'src/app/model/avatar';
 
 @Component({
   selector: 'app-pick-name',
@@ -8,10 +9,12 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class PickNameComponent implements OnInit {
 
+  avatars: Avatar[] = []
   error = ''
 
   nameForm = new FormGroup({
-    gamePin: new FormControl('')
+    emoji: new FormControl(''),
+    name: new FormControl('')
   })
 
   constructor() { }
@@ -20,6 +23,11 @@ export class PickNameComponent implements OnInit {
   }
 
   selectName() {
-    this.error = 'Name unavailable'
+    this.avatars.push({
+      name: this.nameForm.value.name,
+      emoji: this.nameForm.value.emoji
+    })
+    console.log(this.nameForm.value)
+    // this.error = 'Name unavailable'
   }
 }
