@@ -2,23 +2,29 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CatPageComponent } from './pages/cat-page/cat-page.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { EmojiComponent } from './components/emoji/emoji.component'; 
+import { ReactiveFormsModule } from '@angular/forms';
+import { PickNameComponent } from './pages/pick-name/pick-name.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { EmojiPickerComponent } from './components/emoji-picker/emoji-picker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     CatPageComponent,
-    NotFoundComponent
+    EmojiComponent,
+    PickNameComponent,
+    AvatarComponent,
+    EmojiPickerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

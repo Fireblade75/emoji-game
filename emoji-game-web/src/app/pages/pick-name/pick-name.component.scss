@@ -12,9 +12,11 @@ main {
 }
 
 
-.emoji-container {
-    display: inline-block;
-    app-emoji {
-        margin: 16px;
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    app-avatar {
+        margin: 8px;
     }
 }

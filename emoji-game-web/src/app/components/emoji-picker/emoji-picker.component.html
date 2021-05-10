@@ -1,0 +1,7 @@
+<div class="picker">
+    <img *ngFor="let emoji of emojiSources"
+        [src]="emoji.url"
+        [class.active]="emoji.text === selected"
+        (click)="pickEmoji(emoji)" />
+
+</div>

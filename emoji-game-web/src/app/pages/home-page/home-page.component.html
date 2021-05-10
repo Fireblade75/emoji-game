@@ -1,1 +1,14 @@
-<p>home-page works!</p>
+<main>
+    <div class="gameBox">
+        <h1>Emoji Game</h1>
+        <div class="emoji-container">
+            <app-emoji emoji="😀"></app-emoji>
+            <app-emoji emoji="🎮"></app-emoji>
+        </div>
+        <form [formGroup]="gameForm" (ngSubmit)="joinGame()">
+            <div *ngIf="error" class="error-box">{{error}}</div>
+            <input type="text" name="GamePin" placeholder="Game PIN"> <br>
+            <button type="submit">Join</button>
+        </form>
+    </div>
+</main>
